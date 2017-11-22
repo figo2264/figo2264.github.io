@@ -4,7 +4,10 @@ $(function () {
         apiKey: "AIzaSyD-JIQyJYWPY7_U8vhlfwvlt1kHH3sosCw",
         authDomain: "tiveloper-blog.firebaseapp.com",
         databaseURL: "https://tiveloper-blog.firebaseio.com",
-    };
+        projectId: "tiveloper-blog",
+        storageBucket: "tiveloper-blog.appspot.com",
+        messagingSenderId: "174959425802"
+      };
     firebase.initializeApp(config);
     var database = firebase.database();
     var oriUrl = window.location.host;
