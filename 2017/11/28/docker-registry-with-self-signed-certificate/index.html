@@ -3,20 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: processing | Tiveloper</title>
+    <title>Docker registry Self-signed 인증서 사용하기 | Tiveloper</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Programming, Server Management - Roller Sports, Bicycle">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tiveloper">
-<meta property="og:url" content="https://figo2264.github.io/tags/processing/index.html">
+        <meta name="keywords" content="Docker,Registry,Self-signed Certificate,Private Registry,Docker 1.12.3" />
+    
+    <meta name="description" content="Docker private registry - 인증서 적용하기docker registry는 기본적으로 https 통신을 하도록 되어 있다. 예전 버전은 일반 http 통신이 가능한 것으로 보여지는데,어느 버전 이후부터는 그게 안되는 듯 보인다. 사실 개발 또는 스테이징 목적으로 사용되는 registry에서 굳이 유료 인증서를 사용할 필요는 없어 보인다. 그">
+<meta name="keywords" content="Docker,Registry,Self-signed Certificate,Private Registry,Docker 1.12.3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker registry Self-signed 인증서 사용하기">
+<meta property="og:url" content="https://figo2264.github.io/2017/11/28/docker-registry-with-self-signed-certificate/index.html">
 <meta property="og:site_name" content="Tiveloper">
-<meta property="og:description" content="Programming, Server Management - Roller Sports, Bicycle">
+<meta property="og:description" content="Docker private registry - 인증서 적용하기docker registry는 기본적으로 https 통신을 하도록 되어 있다. 예전 버전은 일반 http 통신이 가능한 것으로 보여지는데,어느 버전 이후부터는 그게 안되는 듯 보인다. 사실 개발 또는 스테이징 목적으로 사용되는 registry에서 굳이 유료 인증서를 사용할 필요는 없어 보인다. 그">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://figo2264.github.io/images/docker_registry/Capture.PNG">
+<meta property="og:updated_time" content="2017-11-29T05:00:12.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tiveloper">
-<meta name="twitter:description" content="Programming, Server Management - Roller Sports, Bicycle">
+<meta name="twitter:title" content="Docker registry Self-signed 인증서 사용하기">
+<meta name="twitter:description" content="Docker private registry - 인증서 적용하기docker registry는 기본적으로 https 통신을 하도록 되어 있다. 예전 버전은 일반 http 통신이 가능한 것으로 보여지는데,어느 버전 이후부터는 그게 안되는 듯 보인다. 사실 개발 또는 스테이징 목적으로 사용되는 registry에서 굳이 유료 인증서를 사용할 필요는 없어 보인다. 그">
+<meta name="twitter:image" content="https://figo2264.github.io/images/docker_registry/Capture.PNG">
     
 
     
@@ -135,7 +141,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>processing</em>
+    <a class="page-title-link" href="/categories/System/">System</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/System/Docker/">Docker</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -153,117 +159,159 @@
         </script>
 </div>
                             <!-- ad end -->
-                            
-
-    
-    
+                            <article id="post-docker-registry-with-self-signed-certificate" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/11/22/intellij-running-two-repositories/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/two_vcs_1.PNG)" alt="깃털보다 가벼운 인텔리J 아이디어(IntelliJ Idea) 팁 15 - 두개 이상의 VCS repository 사용하기" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://figo2264.github.io/2017/11/22/intellij-running-two-repositories/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Tools/">Tools</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Tools/IntelliJ/">IntelliJ</a>
-            </div>
-            <div class="date"><time datetime="2017-11-22T01:39:20.000Z" itemprop="datePublished">2017-11-22</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/11/22/intellij-running-two-repositories/">깃털보다 가벼운 인텔리J 아이디어(IntelliJ Idea) 팁 15 - 두개 이상의 VCS repository 사용하기</a>
+        Docker registry Self-signed 인증서 사용하기
         </h1>
     
 
-        <p class="article-excerpt">
-            여러 VCS 운용하기우선 현재 설정은 개인적으로 진행하고 있는 프로젝트에 적용해서 사용하고 있는 방법입니다.
-우선 인텔리J에서는 하나의 프로젝트에 여러개의 모듈을 생성할 수 있습니다. 여러 모듈이 생성될 경우, 분명한건 각 모듈별로 다른 repository를 사용할 수 밖에 없다고 보여집니다.IntelliJ에서는 생각보다 간단하게 VCS repository
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/11/28/docker-registry-with-self-signed-certificate/" class="article-date">
+            <time datetime="2017-11-28T08:58:50.000Z" itemprop="datePublished">2017-11-28</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/11/14/intellij-lombok-plugin/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/lombok_requires_annotation_processing.PNG)" alt="깃털보다 가벼운 인텔리J 아이디어(IntelliJ Idea) 팁 14 - Lombok Plugin 사용하기" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://figo2264.github.io/2017/11/14/intellij-lombok-plugin/">0</span>
-    
-</span>
+                <span id="pageviews">Pageviews: <font class="count">--<font></span>                    
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Docker/">Docker</a>, <a class="tag-link" href="/tags/Docker-1-12-3/">Docker 1.12.3</a>, <a class="tag-link" href="/tags/Private-Registry/">Private Registry</a>, <a class="tag-link" href="/tags/Registry/">Registry</a>, <a class="tag-link" href="/tags/Self-signed-Certificate/">Self-signed Certificate</a>
+    </div>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Tools/">Tools</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Tools/IntelliJ/">IntelliJ</a>
             </div>
-            <div class="date"><time datetime="2017-11-14T02:18:37.000Z" itemprop="datePublished">2017-11-14</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/11/14/intellij-lombok-plugin/">깃털보다 가벼운 인텔리J 아이디어(IntelliJ Idea) 팁 14 - Lombok Plugin 사용하기</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="Docker-private-registry-인증서-적용하기"><a href="#Docker-private-registry-인증서-적용하기" class="headerlink" title="Docker private registry - 인증서 적용하기"></a>Docker private registry - 인증서 적용하기</h2><p>docker registry는 기본적으로 https 통신을 하도록 되어 있다. 예전 버전은 일반 http 통신이 가능한 것으로 보여지는데,<br>어느 버전 이후부터는 그게 안되는 듯 보인다.</p>
+<p>사실 개발 또는 스테이징 목적으로 사용되는 registry에서 굳이 유료 인증서를 사용할 필요는 없어 보인다. 그래서 보통 Self-Signed 인증서를 많이 사용하고 있는 듯 싶다.</p>
+<p>본인도 회사 내부용으로 사용하는 docker registry의 인증서가 만료되서 이를 재 발급 작업하는 작업을 했었고,<br>이 과정에서 공유가 필요한 듯 한 내용이 있어서, 공유해보고자 한다.</p>
+<p>사실 docker registry와 인증서 연동을 구글 검색만 해도 많은 자료를 찾을 수 있습니다. 따라서 관련 내용은 링크로 대체하고자 합니다.</p>
+<p><a href="http://blog.nacyot.com/articles/2014-05-08-docker-registry-introduction/" target="_blank" rel="external">http://blog.nacyot.com/articles/2014-05-08-docker-registry-introduction/</a></p>
+<p><a href="https://novemberde.github.io/2017/04/09/Docker_Registry_0.html" target="_blank" rel="external">https://novemberde.github.io/2017/04/09/Docker_Registry_0.html</a></p>
+<p><a href="https://ma.ttias.be/how-to-read-ssl-certificate-info-from-the-cli/" target="_blank" rel="external">https://ma.ttias.be/how-to-read-ssl-certificate-info-from-the-cli/</a></p>
+<p><a href="http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter06/01/04" target="_blank" rel="external">http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter06/01/04</a></p>
+<p>기타 등등,,,, 많이 찾으실 수 있습니다.</p>
+<p>문제는 인증서를 등록하고 docker를 재시작해도 계속 아래와 같이 확인되지 않은 인증이라는 메세지가 발생하며 registry사용이 불가하다는 점입니다.</p>
+<blockquote>
+<p>x509: certificate signed by unknown authority</p>
+</blockquote>
+<p>위 메세지와 관련해서 차선책으로 <strong>–insecure-registry</strong> 옵션을 쓰는 방법이 있지만 이건 어디까지나 차선책에 해당됩니다.</p>
+<p>수많은 구글링을 통해서 아래와 같은 내용을 찾았습니다.</p>
+<blockquote>
+<p>To those that run into this issue and you have self signed certificates and you do not want to use the “insecure-registry” directive then you need to load your self signed certificates into /etc/docker/certs.d/{host}/. After loading them in remember to RESTART docker daemon. To elaborate some more…..<br>If your registry is hosted at <a href="https://exampleregistry.com" target="_blank" rel="external">https://exampleregistry.com</a> you should have a directory called /etc/docker/certs.d/exampleregistry.com with your self-signed certs inside. Now you will be able to do docker login exampleregistry.com with no x509 error.<br>Now here is a caveat to all this, lets say you want to for some reason explicitly define the port in your login command like this docker login exampleregistry.com:443(which would make no sense, but this is just an example) then you need to ensure that your self signed certificates are inside a folder called /etc/docker/certs.d/exampleregistry.com:443/. Docker makes no assumptions about certs resolving based on hostname only when using a port. You have to actually provide certs on a per port basis by loading your self signed certs into a folder name that includes the port you are trying to access.<br>Hopefully this saves many of you guys a lot of debugging who are using ports to connect to your docker registry.</p>
+</blockquote>
+<p>위 내용을 정리해보면,</p>
+<ul>
+<li>Docker는 hostname을 port와 같이 사용할 경우, docker는 어떤 인증서가 사용되어야 하는지에 대해서 추측을 하지 않음. </li>
+<li>따라서 포트 단위로 인증서를 제공해야 함</li>
+<li>이를 위해서는 <strong>/etc/docker/certs.d/{hostname:port}/</strong>와 같이 호스트명:포트로 구분되는 폴더 하위에 인증서를 저장해두어야 함.</li>
+</ul>
+<p>현재 본인이 회사에서 사용하고 있는 docker version은 Docker version 1.12.3, build 6b644ec이므로 최신 버전에 는 어떻게 다르게 적용되는지는 확인하지 못했습니다.</p>
+<p>이점 참고해주시기 바랍니다.</p>
 
-        <p class="article-excerpt">
-            Lombok 플러그인 설치하기Java개발하면서 99% 사용되는 개념 중 하나가 바로 Encapsulation(Getting / Setting)이라고 생각이 됩니다.문제는 반드시 사용되는 개념임에도 불구하고, 손이 많이 가는 작업이라는 점이죠.
-이런 불편함을 해소하기 위해서 주로 사용하는 라이브러리가 바로 Lombok이며, 해당 라이브러리를 모르시는 분은 없
-        </p>
+        </div>
+        <!-- ad start -->
+        <div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="fluid"
+             data-ad-layout-key="-gm-17+w-1+5l"
+             data-ad-client="ca-pub-6554037096292449"
+             data-ad-slot="1601420233"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+        <!-- ad end -->
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://figo2264.github.io/2017/11/28/docker-registry-with-self-signed-certificate/" data-id="cjakl28p60009eorbro14qmky" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                             <!-- ad start -->
@@ -330,6 +378,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/11/27/intellij-emmet/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">깃털보다 가벼운 IntelliJ Idea팁 16 - Emmet기능 사용하기 (HTML)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -523,11 +584,13 @@
     var disqus_shortname = 'tiveloper';
     
     
+    var disqus_url = 'https://figo2264.github.io/2017/11/28/docker-registry-with-self-signed-certificate/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
